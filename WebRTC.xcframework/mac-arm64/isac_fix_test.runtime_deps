@@ -1,0 +1,8 @@
+./isac_fix_test
+../../src/resources/speech_and_misc_wb.pcm
+../../src/testing/location_tags.json
+../../src/.vpython
+bin/run_isac_fix_test
+../../src/testing/test_env.py
+../../src/testing/xvfb.py
+../../src/testing/scripts/common.py

@@ -1,0 +1,7 @@
+./crc32c_benchmark
+../../src/testing/location_tags.json
+../../src/.vpython
+bin/run_crc32c_benchmark
+../../src/testing/test_env.py
+../../src/testing/xvfb.py
+../../src/testing/scripts/common.py

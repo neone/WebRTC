@@ -1,0 +1,7 @@
+./test_opus_padding
+../../src/testing/location_tags.json
+../../src/.vpython
+bin/run_test_opus_padding
+../../src/testing/test_env.py
+../../src/testing/xvfb.py
+../../src/testing/scripts/common.py

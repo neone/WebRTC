@@ -1,0 +1,30 @@
+defines = -DPNG_SET_OPTION_SUPPORTED -DPNG_ARM_NEON_OPT=2 -DPNG_ARM_NEON_IMPLEMENTATION=1 -D_LIBCPP_HAS_NO_ALIGNED_ALLOCATION -DCR_XCODE_VERSION=1250 -DCR_CLANG_REVISION=\"llvmorg-13-init-9302-g897d7bce-1\" -D_LIBCPP_ABI_UNSTABLE -D_LIBCPP_DISABLE_VISIBILITY_ANNOTATIONS -D_LIBCXXABI_DISABLE_VISIBILITY_ANNOTATIONS -D_LIBCPP_ENABLE_NODISCARD -D_LIBCPP_HAS_NO_VENDOR_AVAILABILITY_ANNOTATIONS -DCR_LIBCXX_REVISION=8fa87946779682841e21e2da977eccfb6cb3bded -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0
+framework_dirs =
+include_dirs = -I../../src -Igen -I../../src/third_party/libpng -I../../src/third_party/zlib
+cflags = -fno-delete-null-pointer-checks -fno-ident -fno-strict-aliasing -fstack-protector -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../src/tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers -arch arm64 -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -Xclang -fdebug-compilation-dir -Xclang . -no-canonical-prefixes -fno-omit-frame-pointer -gdwarf-4 -g2 -isysroot ../../../../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -mmacosx-version-min=10.11.0 -ftrivial-auto-var-init=pattern -fvisibility=hidden -Xclang -add-plugin -Xclang find-bad-constructs -Xclang -plugin-arg-find-bad-constructs -Xclang checked-ptr-as-trivial-member -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare -O3 -Werror -Wall -Wno-unused-variable -Wno-misleading-indentation -Wunguarded-availability -Wno-missing-field-initializers -Wno-unused-parameter -Wno-c++11-narrowing -Wno-unneeded-internal-declaration -Wno-undefined-var-template -Wno-psabi -Wno-ignored-pragma-optimize -Wno-implicit-int-float-conversion -Wno-final-dtor-non-final-class -Wno-builtin-assume-aligned-alignment -Wno-deprecated-copy -Wno-non-c-typedef-for-linkage -Wno-max-tokens -Wno-tautological-constant-out-of-range-compare
+cflags_c = -std=c11 -Wno-implicit-fallthrough
+label_name = libpng_sources
+root_out_dir = .
+target_out_dir = obj/third_party/libpng
+target_output_name = libpng_sources
+
+build obj/third_party/libpng/libpng_sources/png.o: cc ../../src/third_party/libpng/png.c
+build obj/third_party/libpng/libpng_sources/pngerror.o: cc ../../src/third_party/libpng/pngerror.c
+build obj/third_party/libpng/libpng_sources/pngget.o: cc ../../src/third_party/libpng/pngget.c
+build obj/third_party/libpng/libpng_sources/pngmem.o: cc ../../src/third_party/libpng/pngmem.c
+build obj/third_party/libpng/libpng_sources/pngpread.o: cc ../../src/third_party/libpng/pngpread.c
+build obj/third_party/libpng/libpng_sources/pngread.o: cc ../../src/third_party/libpng/pngread.c
+build obj/third_party/libpng/libpng_sources/pngrio.o: cc ../../src/third_party/libpng/pngrio.c
+build obj/third_party/libpng/libpng_sources/pngrtran.o: cc ../../src/third_party/libpng/pngrtran.c
+build obj/third_party/libpng/libpng_sources/pngrutil.o: cc ../../src/third_party/libpng/pngrutil.c
+build obj/third_party/libpng/libpng_sources/pngset.o: cc ../../src/third_party/libpng/pngset.c
+build obj/third_party/libpng/libpng_sources/pngtrans.o: cc ../../src/third_party/libpng/pngtrans.c
+build obj/third_party/libpng/libpng_sources/pngwio.o: cc ../../src/third_party/libpng/pngwio.c
+build obj/third_party/libpng/libpng_sources/pngwrite.o: cc ../../src/third_party/libpng/pngwrite.c
+build obj/third_party/libpng/libpng_sources/pngwtran.o: cc ../../src/third_party/libpng/pngwtran.c
+build obj/third_party/libpng/libpng_sources/pngwutil.o: cc ../../src/third_party/libpng/pngwutil.c
+build obj/third_party/libpng/libpng_sources/arm_init.o: cc ../../src/third_party/libpng/arm/arm_init.c
+build obj/third_party/libpng/libpng_sources/filter_neon_intrinsics.o: cc ../../src/third_party/libpng/arm/filter_neon_intrinsics.c
+build obj/third_party/libpng/libpng_sources/palette_neon_intrinsics.o: cc ../../src/third_party/libpng/arm/palette_neon_intrinsics.c
+
+build obj/third_party/libpng/libpng_sources.stamp: stamp obj/third_party/libpng/libpng_sources/png.o obj/third_party/libpng/libpng_sources/pngerror.o obj/third_party/libpng/libpng_sources/pngget.o obj/third_party/libpng/libpng_sources/pngmem.o obj/third_party/libpng/libpng_sources/pngpread.o obj/third_party/libpng/libpng_sources/pngread.o obj/third_party/libpng/libpng_sources/pngrio.o obj/third_party/libpng/libpng_sources/pngrtran.o obj/third_party/libpng/libpng_sources/pngrutil.o obj/third_party/libpng/libpng_sources/pngset.o obj/third_party/libpng/libpng_sources/pngtrans.o obj/third_party/libpng/libpng_sources/pngwio.o obj/third_party/libpng/libpng_sources/pngwrite.o obj/third_party/libpng/libpng_sources/pngwtran.o obj/third_party/libpng/libpng_sources/pngwutil.o obj/third_party/libpng/libpng_sources/arm_init.o obj/third_party/libpng/libpng_sources/filter_neon_intrinsics.o obj/third_party/libpng/libpng_sources/palette_neon_intrinsics.o || obj/third_party/zlib/libchrome_zlib.a obj/third_party/zlib/zlib_adler32_simd.stamp obj/third_party/zlib/zlib_common_headers.stamp obj/third_party/zlib/zlib_inflate_chunk_simd.stamp obj/third_party/zlib/zlib_arm_crc32.stamp obj/third_party/zlib/zlib_x86_simd.stamp

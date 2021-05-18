@@ -1,0 +1,10 @@
+./audio_codec_speed_tests
+../../src/resources/audio_coding/music_stereo_48kHz.pcm
+../../src/resources/audio_coding/speech_mono_16kHz.pcm
+../../src/resources/audio_coding/speech_mono_32_48kHz.pcm
+../../src/testing/location_tags.json
+../../src/.vpython
+bin/run_audio_codec_speed_tests
+../../src/testing/test_env.py
+../../src/testing/xvfb.py
+../../src/testing/scripts/common.py

@@ -1,0 +1,13 @@
+./modules_tests
+../../src/resources/audio_coding/testfile16kHz.pcm
+../../src/resources/audio_coding/testfile32kHz.pcm
+../../src/resources/audio_coding/teststereo32kHz.pcm
+../../src/resources/foreman_cif.yuv
+../../src/resources/ConferenceMotion_1280_720_50.yuv
+../../src/resources/FourPeople_1280x720_30.yuv
+../../src/testing/location_tags.json
+../../src/.vpython
+bin/run_modules_tests
+../../src/testing/test_env.py
+../../src/testing/xvfb.py
+../../src/testing/scripts/common.py

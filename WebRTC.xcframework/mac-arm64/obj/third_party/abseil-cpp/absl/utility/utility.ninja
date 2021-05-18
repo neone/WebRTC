@@ -1,0 +1,10 @@
+defines = -D_LIBCPP_HAS_NO_ALIGNED_ALLOCATION -DCR_XCODE_VERSION=1250 -DCR_CLANG_REVISION=\"llvmorg-13-init-9302-g897d7bce-1\" -D_LIBCPP_ABI_UNSTABLE -D_LIBCPP_DISABLE_VISIBILITY_ANNOTATIONS -D_LIBCXXABI_DISABLE_VISIBILITY_ANNOTATIONS -D_LIBCPP_ENABLE_NODISCARD -D_LIBCPP_HAS_NO_VENDOR_AVAILABILITY_ANNOTATIONS -DCR_LIBCXX_REVISION=8fa87946779682841e21e2da977eccfb6cb3bded -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DABSL_ALLOCATOR_NOTHROW=1
+framework_dirs =
+include_dirs = -I../../src -Igen -I../../src/third_party/abseil-cpp
+label_name = utility
+root_out_dir = .
+target_out_dir = obj/third_party/abseil-cpp/absl/utility
+target_output_name = utility
+
+
+build obj/third_party/abseil-cpp/absl/utility/utility.stamp: stamp || obj/third_party/abseil-cpp/absl/base/base_internal.stamp obj/third_party/abseil-cpp/absl/base/config.stamp obj/third_party/abseil-cpp/absl/meta/type_traits.stamp

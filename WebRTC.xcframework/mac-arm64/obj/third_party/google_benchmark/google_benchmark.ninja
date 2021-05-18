@@ -1,0 +1,30 @@
+defines = -DHAVE_GNU_POSIX_REGEX=0 -DHAVE_POSIX_REGEX=0 -DHAVE_STD_REGEX=1 -D_LIBCPP_HAS_NO_ALIGNED_ALLOCATION -DCR_XCODE_VERSION=1250 -DCR_CLANG_REVISION=\"llvmorg-13-init-9302-g897d7bce-1\" -D_LIBCPP_ABI_UNSTABLE -D_LIBCPP_DISABLE_VISIBILITY_ANNOTATIONS -D_LIBCXXABI_DISABLE_VISIBILITY_ANNOTATIONS -D_LIBCPP_ENABLE_NODISCARD -D_LIBCPP_HAS_NO_VENDOR_AVAILABILITY_ANNOTATIONS -DCR_LIBCXX_REVISION=8fa87946779682841e21e2da977eccfb6cb3bded -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORES=0 -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0
+framework_dirs =
+include_dirs = -I../../src -Igen -I../../src/third_party/google_benchmark/src/include
+cflags = -fno-delete-null-pointer-checks -fno-ident -fno-strict-aliasing -fstack-protector -fcolor-diagnostics -fmerge-all-constants -fcrash-diagnostics-dir=../../src/tools/clang/crashreports -mllvm -instcombine-lower-dbg-declare=0 -fcomplete-member-pointers -arch arm64 -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -Xclang -fdebug-compilation-dir -Xclang . -no-canonical-prefixes -O2 -fno-omit-frame-pointer -gdwarf-4 -g2 -isysroot ../../../../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -mmacosx-version-min=10.11.0 -ftrivial-auto-var-init=pattern -fvisibility=hidden -Xclang -add-plugin -Xclang find-bad-constructs -Xclang -plugin-arg-find-bad-constructs -Xclang checked-ptr-as-trivial-member -Wheader-hygiene -Wstring-conversion -Wtautological-overlap-compare -Werror -Wall -Wno-unused-variable -Wno-misleading-indentation -Wunguarded-availability -Wno-missing-field-initializers -Wno-unused-parameter -Wno-c++11-narrowing -Wno-unneeded-internal-declaration -Wno-undefined-var-template -Wno-psabi -Wno-ignored-pragma-optimize -Wno-implicit-int-float-conversion -Wno-final-dtor-non-final-class -Wno-builtin-assume-aligned-alignment -Wno-deprecated-copy -Wno-non-c-typedef-for-linkage -Wno-max-tokens
+cflags_cc = -std=c++14 -fno-trigraphs -Wno-trigraphs -stdlib=libc++ -fno-exceptions -fno-rtti -nostdinc++ -isystem../../src/buildtools/third_party/libc++/trunk/include -isystem../../src/buildtools/third_party/libc++abi/trunk/include -fvisibility-inlines-hidden
+label_name = google_benchmark
+root_out_dir = .
+target_out_dir = obj/third_party/google_benchmark
+target_output_name = google_benchmark
+
+build obj/third_party/google_benchmark/google_benchmark/benchmark.o: cxx ../../src/third_party/google_benchmark/src/src/benchmark.cc
+build obj/third_party/google_benchmark/google_benchmark/benchmark_api_internal.o: cxx ../../src/third_party/google_benchmark/src/src/benchmark_api_internal.cc
+build obj/third_party/google_benchmark/google_benchmark/benchmark_name.o: cxx ../../src/third_party/google_benchmark/src/src/benchmark_name.cc
+build obj/third_party/google_benchmark/google_benchmark/benchmark_register.o: cxx ../../src/third_party/google_benchmark/src/src/benchmark_register.cc
+build obj/third_party/google_benchmark/google_benchmark/benchmark_runner.o: cxx ../../src/third_party/google_benchmark/src/src/benchmark_runner.cc
+build obj/third_party/google_benchmark/google_benchmark/colorprint.o: cxx ../../src/third_party/google_benchmark/src/src/colorprint.cc
+build obj/third_party/google_benchmark/google_benchmark/commandlineflags.o: cxx ../../src/third_party/google_benchmark/src/src/commandlineflags.cc
+build obj/third_party/google_benchmark/google_benchmark/complexity.o: cxx ../../src/third_party/google_benchmark/src/src/complexity.cc
+build obj/third_party/google_benchmark/google_benchmark/console_reporter.o: cxx ../../src/third_party/google_benchmark/src/src/console_reporter.cc
+build obj/third_party/google_benchmark/google_benchmark/counter.o: cxx ../../src/third_party/google_benchmark/src/src/counter.cc
+build obj/third_party/google_benchmark/google_benchmark/csv_reporter.o: cxx ../../src/third_party/google_benchmark/src/src/csv_reporter.cc
+build obj/third_party/google_benchmark/google_benchmark/json_reporter.o: cxx ../../src/third_party/google_benchmark/src/src/json_reporter.cc
+build obj/third_party/google_benchmark/google_benchmark/reporter.o: cxx ../../src/third_party/google_benchmark/src/src/reporter.cc
+build obj/third_party/google_benchmark/google_benchmark/sleep.o: cxx ../../src/third_party/google_benchmark/src/src/sleep.cc
+build obj/third_party/google_benchmark/google_benchmark/statistics.o: cxx ../../src/third_party/google_benchmark/src/src/statistics.cc
+build obj/third_party/google_benchmark/google_benchmark/string_util.o: cxx ../../src/third_party/google_benchmark/src/src/string_util.cc
+build obj/third_party/google_benchmark/google_benchmark/sysinfo.o: cxx ../../src/third_party/google_benchmark/src/src/sysinfo.cc
+build obj/third_party/google_benchmark/google_benchmark/timers.o: cxx ../../src/third_party/google_benchmark/src/src/timers.cc
+
+build obj/third_party/google_benchmark/google_benchmark.stamp: stamp obj/third_party/google_benchmark/google_benchmark/benchmark.o obj/third_party/google_benchmark/google_benchmark/benchmark_api_internal.o obj/third_party/google_benchmark/google_benchmark/benchmark_name.o obj/third_party/google_benchmark/google_benchmark/benchmark_register.o obj/third_party/google_benchmark/google_benchmark/benchmark_runner.o obj/third_party/google_benchmark/google_benchmark/colorprint.o obj/third_party/google_benchmark/google_benchmark/commandlineflags.o obj/third_party/google_benchmark/google_benchmark/complexity.o obj/third_party/google_benchmark/google_benchmark/console_reporter.o obj/third_party/google_benchmark/google_benchmark/counter.o obj/third_party/google_benchmark/google_benchmark/csv_reporter.o obj/third_party/google_benchmark/google_benchmark/json_reporter.o obj/third_party/google_benchmark/google_benchmark/reporter.o obj/third_party/google_benchmark/google_benchmark/sleep.o obj/third_party/google_benchmark/google_benchmark/statistics.o obj/third_party/google_benchmark/google_benchmark/string_util.o obj/third_party/google_benchmark/google_benchmark/sysinfo.o obj/third_party/google_benchmark/google_benchmark/timers.o

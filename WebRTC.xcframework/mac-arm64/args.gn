@@ -1,0 +1,7 @@
+target_os = "mac"
+target_cpu = "arm64"
+is_component_build = false
+is_debug = false
+rtc_libvpx_build_vp9 = false
+enable_stripping = true
+rtc_enable_protobuf = false

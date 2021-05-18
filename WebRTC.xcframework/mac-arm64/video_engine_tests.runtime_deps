@@ -1,0 +1,13 @@
+./video_engine_tests
+../../src/resources/foreman_cif_short.yuv
+../../src/resources/voice_engine/audio_long16.pcm
+../../src/resources/difficult_photo_1850_1110.yuv
+../../src/resources/photo_1850_1110.yuv
+../../src/resources/presentation_1850_1110.yuv
+../../src/resources/web_screenshot_1850_1110.yuv
+../../src/testing/location_tags.json
+../../src/.vpython
+bin/run_video_engine_tests
+../../src/testing/test_env.py
+../../src/testing/xvfb.py
+../../src/testing/scripts/common.py

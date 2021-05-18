@@ -1,0 +1,8 @@
+./audio_decoder_unittests
+../../src/resources/audio_coding/testfile32kHz.pcm
+../../src/testing/location_tags.json
+../../src/.vpython
+bin/run_audio_decoder_unittests
+../../src/testing/test_env.py
+../../src/testing/xvfb.py
+../../src/testing/scripts/common.py

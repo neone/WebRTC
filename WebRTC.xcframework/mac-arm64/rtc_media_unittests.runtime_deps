@@ -1,0 +1,14 @@
+./rtc_media_unittests
+../../src/resources/media/captured-320x240-2s-48.frames
+../../src/resources/media/faces.1280x720_P420.yuv
+../../src/resources/media/faces_I400.jpg
+../../src/resources/media/faces_I411.jpg
+../../src/resources/media/faces_I420.jpg
+../../src/resources/media/faces_I422.jpg
+../../src/resources/media/faces_I444.jpg
+../../src/testing/location_tags.json
+../../src/.vpython
+bin/run_rtc_media_unittests
+../../src/testing/test_env.py
+../../src/testing/xvfb.py
+../../src/testing/scripts/common.py
